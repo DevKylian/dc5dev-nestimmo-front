@@ -19,11 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <QueryClientProviderCustom>
-        <body className={inter.className}>
+        <body className={`${inter.className} bg-gray-100 text-gray-900`}>
           <Navbar />
-          {children}
-
+          <main className="container mx-auto p-4">
+            {children}
+          </main>
           <Toaster />
         </body>
       </QueryClientProviderCustom>
