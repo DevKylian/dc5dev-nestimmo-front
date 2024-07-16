@@ -32,14 +32,12 @@ const PostList = () => {
       <div className="grid grid-cols-4 gap-4">
         {data?.map((category: any) => (
           <Link key={category.id} href={`/categories/${category.id}`}>
-            <a>
               <Card>
                 <CardHeader>
                   <CardTitle>{category.name}</CardTitle>
                   <CardDescription>Description de la catégorie</CardDescription>
                 </CardHeader>
               </Card>
-            </a>
           </Link>
         ))}
       </div>
